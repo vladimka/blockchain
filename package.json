@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "prestart": "tsc -p tsconfig.json",
-    "build" : "tsc -p tsconfig.json"
+    "prestart": "npm run build",
+    "build": "npx tsc -p tsconfig.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.15.11"
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.3"
   }
 }
