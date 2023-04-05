@@ -1,8 +1,10 @@
 const Blockchain = require("./dist/index").default;
 const chain = new Blockchain();
 
-chain.addTransaction(1,2,100);
-chain.addBlock(0);
-chain.addTransaction(1,2,100);
-chain.addBlock(0);
-console.log(chain.blocks, chain.isChainValid());
+let start = Date.now();
+while(chain.blocks.length < 10){
+    chain.addTransaction(0, 1, 1);
+    chain.addBlock();
+    console.log(chain.getLastBlock(), chain.difficulty);
+}
+console.log(`На майнинг 10 блков ушло ${Date.now() - start} миллисекунд`);

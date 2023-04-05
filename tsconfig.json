@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "types"
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"]
